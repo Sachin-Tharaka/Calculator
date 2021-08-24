@@ -1,4 +1,4 @@
-package com.sachin.calculator;
+package com.lk.sachin;
 
 public class Calculator {
     int num1,num2;
