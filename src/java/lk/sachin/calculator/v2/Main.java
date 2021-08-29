@@ -19,7 +19,7 @@ public class Main {
             System.out.println("Fail! Please provide any valid operation");
             return;
         }
-
+// Read the numbers text file
         List<String> numbers = Files.readAllLines(Paths.get("numbers.txt"));
 
         double num1 = Double.parseDouble(numbers.get(0));
