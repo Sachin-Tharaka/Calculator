@@ -14,7 +14,7 @@ public class Main {
 
         OperationFactory operationFactory= new OperationFactory();
         Operation operation= operationFactory.getInstance(oprt);
-        final Double result = operation.execute(numbers);
+        Double result = operation.execute(numbers);
 
         UI ui = new UI();
         ui.showMessage("Result is " + result);
