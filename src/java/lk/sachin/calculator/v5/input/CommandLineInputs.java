@@ -1,6 +1,6 @@
 package lk.sachin.calculator.v5.input;
 
-public class CommandLineInputs {
+public class CommandLineInputs implements Inputs {
 
     private final String[] args;
 
