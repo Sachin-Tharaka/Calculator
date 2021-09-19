@@ -1,6 +1,7 @@
 package lk.sachin.calculator.v5;
 
 import lk.sachin.calculator.v5.input.Inputs;
+import lk.sachin.calculator.v5.operation.InvalidOperationException;
 import lk.sachin.calculator.v5.operation.Operation;
 import lk.sachin.calculator.v5.operation.OperationFactory;
 import lk.sachin.calculator.v5.repository.NumberRepository;
@@ -26,7 +27,13 @@ public class CalculatorApp {
         String opr = inputs.getOperator();
         Double[] numbers = numberRepository.getNumbers();
         Operation operation = operationFactory.getInstance(opr);
-        final double result = operation.execute(numbers);
+         Double result =null;
+        try {
+            result = operation.execute(numbers);
+        } catch (InvalidOperationException e) {
+            ui.showMessage("Error Occurred"+ e.getMessage());
+            return;
+        }
         ui.showMessage("Result is " + result);
 
     }

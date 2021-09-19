@@ -4,5 +4,5 @@ package lk.sachin.calculator.v5.operation;
 public interface Operation {
 
 
-  public Double execute(Double[] numbers);
+  public Double execute(Double[] numbers) throws InvalidOperationException;
 }
