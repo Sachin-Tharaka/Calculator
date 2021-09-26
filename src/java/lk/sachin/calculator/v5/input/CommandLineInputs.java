@@ -9,17 +9,17 @@ public class CommandLineInputs implements Inputs {
         this.args = arguments;
     }
 
-    public String getOperator(){
+    public String getOperator() throws InvlidInputException {
         if (args.length == 0) {
-            System.out.println("Please provide any operator as an arguments");
-            return ""; // will change in future
+
+            throw new InvlidInputException("Please provide any operator as an arguments");
         }
 
         String oprt = args[0];
 
         if (!(oprt.equals("add") || oprt.equals("sub") || oprt.equals("mul") || oprt.equals("div"))) {
-            System.out.println("Fail! Please provide any valid operation");
-            return ""; // will change in future
+           throw new InvlidInputException("Please provide any operator as an arguments");
+
         }
         return oprt;
     }
